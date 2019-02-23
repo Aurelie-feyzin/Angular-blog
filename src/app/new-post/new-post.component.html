@@ -1,0 +1,18 @@
+<h3>New Post</h3>
+<form [formGroup]="newPost" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>Titre* </label>
+    <input type="text" formControlName="title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Contenu*</label>
+    <textarea type="text" formControlName="content" rows="3" class="form-control"></textarea>
+  </div>
+  <p>
+  <small>* Obligatoire</small>
+  </p>
+  <button type="submit" [disabled]="!newPost.valid">Submit</button>
+</form>
+
+<pre>{{newPost.getRawValue()|json}}</pre>
+

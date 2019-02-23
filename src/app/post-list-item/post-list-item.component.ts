@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Post } from '../app.component';
+import {Component, Input} from '@angular/core';
+import {Post, PostsService} from '../service/posts.service';
 
 @Component({
   selector: 'app-post-list-item',
@@ -9,24 +9,31 @@ import { Post } from '../app.component';
 export class PostListItemComponent {
 
   @Input() post: Post;
+  @Input() index: number;
 
-  addLoveIt() {
-    this.post.loveIts++;
+  public constructor(public postsService: PostsService) {
   }
 
-  removeLoveIt() {
-    this.post.loveIts--;
+  addLoveIt(index: number) {
+    this.postsService.addLoveIts(index);
+  }
+
+  removeLoveIt(index: number) {
+    this.postsService.removeLoveIts(index);
   }
 
   getLoveIt() {
-    let classCard = '{list-group-item: true';
+    let classCard = 'list-group-item';
     if (this.post.loveIts < 0) {
       classCard += ', list-group-item-danger';
-    } else if (this.post.loveIts === 0) {
-      classCard += '}';
-    } else {
+    }
+    if (this.post.loveIts > 0) {
       classCard += ', list-group-item-success';
     }
     return classCard;
+  }
+
+  removePost(index: number) {
+    this.postsService.deletePost(index);
   }
 }
