@@ -1,5 +1,6 @@
 # Développez des applications Web avec Angular
 ## Activity 1 : Créez une application de type blog
+## Activity 2 : Implémentez l'ajout des posts dans votre blog
 
 ### Installation
 
@@ -8,7 +9,13 @@ git clone
 npm install
 ```
 
-## Development server
+### Configuration
+```
+copy src/environments/environment.dist.ts and rename to src/environments/environment.ts
+in src/environments/environment.ts add your firebase URL
+```
+
+### Development server
 
 Run `ng serve -o` for a dev server. 
 

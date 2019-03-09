@@ -33,7 +33,7 @@ export class PostListItemComponent {
     return classCard;
   }
 
-  removePost(index: number) {
-    this.postsService.deletePost(index);
+  removePost(post: Post) {
+    this.postsService.deletePost(post);
   }
 }

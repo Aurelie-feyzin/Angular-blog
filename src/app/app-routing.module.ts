@@ -4,7 +4,7 @@ import {NewPostComponent} from './new-post/new-post.component';
 import {PostListComponent} from './post-list/post-list.component';
 
 const routes: Routes = [
-    {path: 'postsService', component: PostListComponent},
+    {path: 'posts', component: PostListComponent},
     {path: 'new', component: NewPostComponent},
     {path: '', component: PostListComponent},
 ];

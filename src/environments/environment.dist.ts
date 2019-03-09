@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    databaseURL: 'https://angular-ocr-blog.firebaseio.com',
+    databaseURL: 'Your Firebase URL',
   }
 };
 

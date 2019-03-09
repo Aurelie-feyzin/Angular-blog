@@ -6,6 +6,6 @@
             <p class="card-text">{{post.content}}</p>
             <button type="button" class="btn btn-success" (click)="addLoveIt(index)">Love it :)</button>
             <button type="button" class="btn btn-danger" (click)="removeLoveIt(index)">Don't love it :(</button>{{post.loveIts}}
-            <button type="button" class="btn btn-danger float-right" (click)="removePost(index)">Supprimer</button>
+            <button type="button" class="btn btn-danger float-right" (click)="removePost(post)">Supprimer</button>
         </div>
 </li>
